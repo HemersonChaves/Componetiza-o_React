@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { TransactionsContext } from "../../TransactionsContext";
+import { useTransactions } from "../../hookd/useTransactions";
 import { Container } from "./styles";
 
 export function TransactionTable(){
-    const{transactions} = useContext(TransactionsContext);
+    const{transactions} = useTransactions();
 
     return(
         <Container>
@@ -30,25 +29,6 @@ export function TransactionTable(){
                        }</td>
                     </tr>
                     ))}
-                    
-                    <tr>
-                        <td>Aluguel</td>
-                        <td className="withdraw">- R$ 1.000</td>
-                        <td>Casa</td>
-                        <td>12/11/2021</td>
-                    </tr>
-                    <tr>
-                        <td>Desenvolvimento de website</td>
-                        <td>R$ 12.000</td>
-                        <td>Desenvolvimento</td>
-                        <td>12/11/2021</td>
-                    </tr>
-                    <tr>
-                        <td>Desenvolvimento de website</td>
-                        <td>R$ 12.000</td>
-                        <td>Desenvolvimento</td>
-                        <td>12/11/2021</td>
-                    </tr>
                 </tbody>
             </table>
         </Container>
