@@ -20,7 +20,7 @@ export function TransactionTable(){
                     {transactions.map(transactions =>(
                         <tr key={transactions.id}>
                         <td>{transactions.title}</td>
-                        <td className="deposit">{new Intl.NumberFormat('pt-br',{
+                        <td className={transactions.type}>{new Intl.NumberFormat('pt-br',{
                             style:'currency',
                             currency: 'BRL'
                         }).format(transactions.amount)}</td>                        
